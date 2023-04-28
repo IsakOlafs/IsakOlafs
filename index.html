@@ -4,20 +4,33 @@
 	<meta charset="UTF-8">
 	<title>Photography Portfolio</title>
 	<link rel="stylesheet" href="style.css">
-	<style>
-      img {
-        width: 500px;
-        height: auto;
-      }
-    </style>
-  </head>
+	<script>
+		function showGallery(gallery) {
+			var galleries = document.getElementsByClassName("gallery");
+			for (var i = 0; i < galleries.length; i++) {
+				if (galleries[i].id == gallery) {
+					galleries[i].style.display = "block";
+				} else {
+					galleries[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+</head>
 <body>
 	<header>
 		<h1>Photography Portfolio</h1>
 		<nav>
 			<ul>
 				<li><a href="#about">About</a></li>
-				<li><a href="#gallery">Gallery</a></li>
+				<li class="dropdown">
+					<a href="#">Gallery</a>
+					<div class="dropdown-content">
+						<a href="#" onclick="showGallery('wildlife')">Wildlife</a>
+						<a href="#" onclick="showGallery('dogs')">Dogs</a>
+						<a href="#" onclick="showGallery('landscape')">Landscape</a>
+					</div>
+				</li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -38,13 +51,29 @@ Take a look at my portfolio to see some of my latest work, and please don't hesi
 		</section>
 		<section id="gallery">
 			<h2>Gallery</h2>
-			<div class="gallery">
-				<img src="7T0A4016-Edit.jpg" alt="Photo 1" style="width:500px;height:auto;">
-				<img src="7T0A4218-Edit.jpg" alt="Photo 2" style="width:500px;height:auto;">
-				<img src="7T0A4816-Edit.jpg" alt="Photo 3" style="width:500px;height:auto;">
-				<img src="7T0A6826-Edit.jpg" alt="Photo 4" style="width:500px;height:auto;">
-				<img src="7T0A6955-Edit.jpg" alt="Photo 5" style="width:500px;height:auto;">
-				<img src="7T0A6999-Edit.jpg" alt="Photo 6" style="width:500px;height:auto;">
+			<div class="gallery" id="dogs">
+				<img src="7T0A4016-Edit.jpg" alt="Photo 1">
+				<img src="7T0A4218-Edit.jpg" alt="Photo 2">
+				<img src="7T0A4816-Edit.jpg" alt="Photo 3">
+				<img src="7T0A6826-Edit.jpg" alt="Photo 4">
+				<img src="7T0A6955-Edit.jpg" alt="Photo 5">
+				<img src="7T0A6999-Edit.jpg" alt="Photo 6">
+			</div>
+			<div class="gallery" id="dogs">
+				<img src="dog1.jpg" alt="Dog 1">
+				<img src="dog2.jpg" alt="Dog 2">
+				<img src="dog3.jpg" alt="Dog 3">
+				<img src="dog4.jpg" alt="Dog 4">
+				<img src="dog5.jpg" alt="Dog 5">
+				<img src="dog6.jpg" alt="Dog 6">
+			</div>
+			<div class="gallery" id="landscape">
+				<img src="landscape1.jpg" alt="Landscape 1">
+				<img src="landscape2.jpg" alt="Landscape 2">
+				<img src="landscape3.jpg" alt="Landscape 3">
+				<img src="landscape4.jpg" alt="Landscape 4">
+				<img src="landscape5.jpg" alt="Landscape 5">
+				<img src="landscape6.jpg" alt="Landscape 6">
 			</div>
 		</section>
 		<section id="contact">
