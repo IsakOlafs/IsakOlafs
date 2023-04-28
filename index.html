@@ -15,6 +15,17 @@
 				}
 			}
 		}
+
+		function showImage(img) {
+			var modal = document.getElementById("modal");
+			var modalImg = document.getElementById("modalImg");
+			modal.style.display = "block";
+			modalImg.src = img.src;
+			var span = document.getElementsByClassName("close")[0];
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+		}
 	</script>
 </head>
 <body>
@@ -31,7 +42,7 @@
 						<a href="#" onclick="showGallery('landscape')">Landscape</a>
 					</div>
 				</li>
-				<li><a href="#contact">Contact</a></li>
+					<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -43,28 +54,28 @@
 		<section id="gallery">
 			<h2>Gallery</h2>
 			<div class="gallery" id="wildlife">
-				<img src="vefsíða/0V9A0042-Edit.jpg" alt="Wildlife 1">
-				<img src="vefsíða/0V9A4064-Edit.jpg" alt="Wildlife 2">
-				<img src="vefsíða/Hreindýr.jpg" alt="Wildlife 3">
-				<img src="vefsíða/0V9A4408.jpg" alt="Wildlife 4">
-				<img src="vefsíða/3H5A6535.jpg" alt="Wildlife 5">
-				<img src="vefsíða/0V9A9828-Edit.jpg" alt="Wildlife 6">
+				<img src="vefsíða/0V9A0042-Edit.jpg" alt="Wildlife 1" onclick="showImage(this);">
+				<img src="vefsíða/0V9A4064-Edit.jpg" alt="Wildlife 2" onclick="showImage(this);">
+				<img src="vefsíða/Hreindýr.jpg" alt="Wildlife 3" onclick="showImage(this);">
+				<img src="vefsíða/0V9A4408.jpg" alt="Wildlife 4" onclick="showImage(this);">
+				<img src="vefsíða/3H5A6535.jpg" alt="Wildlife 5" onclick="showImage(this);">
+				<img src="vefsíða/0V9A9828-Edit.jpg" alt="Wildlife 6" onclick="showImage(this);">
 			</div>
 			<div class="gallery" id="dogs">
-				<img src="7T0A4016-Edit.jpg" alt="Dog 1">
-				<img src="7T0A4218-Edit.jpg" alt="Dog 2">
-				<img src="7T0A4816-Edit.jpg" alt="Dog 3">
-				<img src="7T0A6826-Edit.jpg" alt="Dog 4">
-				<img src="7T0A6955-Edit.jpg" alt="Dog 5">
-				<img src="7T0A6999-Edit.jpg" alt="Dog 6">
+				<img src="7T0A4016-Edit.jpg" alt="Dog 1" onclick="showImage(this);">
+				<img src="7T0A4218-Edit.jpg" alt="Dog 2" onclick="showImage(this);">
+				<img src="7T0A4816-Edit.jpg" alt="Dog 3" onclick="showImage(this);">
+				<img src="7T0A6826-Edit.jpg" alt="Dog 4" onclick="showImage(this);">
+				<img src="7T0A6955-Edit.jpg" alt="Dog 5" onclick="showImage(this);">
+				<img src="7T0A6999-Edit.jpg" alt="Dog 6" onclick="showImage(this);">
 			</div>
 			<div class="gallery" id="landscape">
-				<img src="vefsíða/0V9A6344-Pano.jpg" alt="Landscape 1">
-				<img src="vefsíða/0V9A9212-Edit.jpg" alt="Landscape 2">
-				<img src="vefsíða/7T0A7077.jpg" alt="Landscape 3">
-				<img src="vefsíða/7T0A7181.jpg" alt="Landscape 4">
-				<img src="vefsíða/0V9A9483-Edit.jpg" alt="Landscape 5">
-				<img src="vefsíða/7T0A8025-Edit.jpg" alt="Landscape 6">
+				<img src="vefsíða/0V9A6344-Pano.jpg" alt="Landscape 1" onclick="showImage(this);>
+				<img src="vefsíða/0V9A9212-Edit.jpg" alt="Landscape 2" onclick="showImage(this);>
+				<img src="vefsíða/7T0A7077.jpg" alt="Landscape 3" onclick="showImage(this);>
+				<img src="vefsíða/7T0A7181.jpg" alt="Landscape 4" onclick="showImage(this);>
+				<img src="vefsíða/0V9A9483-Edit.jpg" alt="Landscape 5" onclick="showImage(this);>
+				<img src="vefsíða/7T0A8025-Edit.jpg" alt="Landscape 6" onclick="showImage(this);>
 			</div>
 		</section>
 		<section id="contact">
