@@ -4,81 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Photography Portfolio</title>
 	<link rel="stylesheet" href="style.css">
-	<style>
-		.modal {
-			display: none;
-			position: fixed;
-			z-index: 1;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: rgba(0,0,0,0.9);
-		}
-
-		.modal-content {
-			margin: auto;
-			display: block;
-			max-width: 100%;
-			max-height: 100%;
-		}
-
-		.close {
-			position: absolute;
-			top: 10px;
-			right: 25px;
-			font-size: 35px;
-			font-weight: bold;
-			color: white;
-			cursor: pointer;
-		}
-
-		.close:hover,
-		.close:focus {
-			color: #999;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-		.gallery img {
-			width: 100%;
-			max-width: 300px;
-			height: auto;
-			margin: 5px;
-			cursor: pointer;
-		}
-
-		@media screen and (min-width: 768px) {
-			.gallery img {
-				max-width: 400px;
-			}
-		}
-	</style>
 	<script>
 		function showGallery(gallery) {
 			var galleries = document.getElementsByClassName("gallery");
 			for (var i = 0; i < galleries.length; i++) {
 				if (galleries[i].id == gallery) {
-					galleries[i].style.display = "flex";
+					galleries[i].style.display = "block";
 				} else {
 					galleries[i].style.display = "none";
 				}
 			}
-		}
-
-		var modal = document.getElementById("myModal");
-		var modalImg = document.getElementById("img01");
-
-		function showModal(img) {
-			modal.style.display = "block";
-			modalImg.src = img.src;
-		}
-
-		var span = document.getElementsByClassName("close")[0];
-
-		span.onclick = function() {
-			modal.style.display = "none";
 		}
 	</script>
 </head>
@@ -108,52 +43,45 @@
 		<section id="gallery">
 			<h2>Gallery</h2>
 			<div class="gallery" id="wildlife">
-			<img src="vefsíða/0V9A0042-Edit.jpg" alt="Wildlife 1" onclick="showModal(this);">
-			<img src="vefsíða/0V9A4064-Edit.jpg" alt="Wildlife 2" onclick="showModal(this);">
-			<img src="vefsíða/Hreindýr.jpg" alt="Wildlife 3" onclick="showModal(this);">
-			<img src="vefsíða/0V9A4408.jpg" alt="Wildlife 4" onclick="showModal(this);">
-			<img src="vefsíða/3H5A6535.jpg" alt="Wildlife 5" onclick="showModal(this);">
-			<img src="vefsíða/0V9A9828-Edit.jpg" alt="Wildlife 6" onclick="showModal(this);">
-		</div>
-		<div class="gallery" id="dogs">
-			<img src="7T0A4016-Edit.jpg" alt="Dog 1" onclick="showModal(this);">
-			<img src="7T0A4218-Edit.jpg" alt="Dog 2" onclick="showModal(this);">
-			<img src="7T0A4816-Edit.jpg" alt="Dog 3" onclick="showModal(this);">
-			<img src="7T0A6826-Edit.jpg" alt="Dog 4" onclick="showModal(this);">
-			<img src="7T0A6955-Edit.jpg" alt="Dog 5" onclick="showModal(this);">
-			<img src="7T0A6999-Edit.jpg" alt="Dog 6" onclick="showModal(this);">
-		</div>
-		<div class="gallery" id="landscape">
-			<img src="vefsíða/0V9A6344-Pano.jpg" alt="Landscape 1" onclick="showModal(this);">
-			<img src="vefsíða/0V9A9212-Edit.jpg" alt="Landscape 2" onclick="showModal(this);">
-			<img src="vefsíða/7T0A7077.jpg" alt="Landscape 3" onclick="showModal(this);">
-			<img src="vefsíða/7T0A7181.jpg" alt="Landscape 4" onclick="showModal(this);">
-			<img src="vefsíða/0V9A9483-Edit.jpg" alt="Landscape 5" onclick="showModal(this);">
-			<img src="vefsíða/7T0A8025-Edit.jpg" alt="Landscape 6" onclick="showModal(this);">
-		</div>
-		<div id="myModal" class="modal">
-			<span class="close">&times;</span>
-			<img class="modal-content" id="img01">
-		</div>
-	</section>
-	<section id="contact">
-		<h2>Contact</h2>
-		<form>
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
-
-			<label for="email">Email:</label>
-			<input type="email" id="email" name="email" required>
-
-			<label for="message">Message:</label>
-			<textarea id="message" name="message" required></textarea>
-
-			<input type="submit" value="Send">
-		</form>
-	</section>
-</main>
-<footer>
-	<p>&copy; 2023 Photography Portfolio</p>
-</footer>
+				<img src="vefsíða/0V9A0042-Edit.jpg" alt="Wildlife 1">
+				<img src="vefsíða/0V9A4064-Edit.jpg" alt="Wildlife 2">
+				<img src="vefsíða/Hreindýr.jpg" alt="Wildlife 3">
+				<img src="vefsíða/0V9A4408.jpg" alt="Wildlife 4">
+				<img src="vefsíða/3H5A6535.jpg" alt="Wildlife 5">
+				<img src="vefsíða/0V9A9828-Edit.jpg" alt="Wildlife 6">
+			</div>
+			<div class="gallery" id="dogs">
+				<img src="7T0A4016-Edit.jpg" alt="Dog 1">
+				<img src="7T0A4218-Edit.jpg" alt="Dog 2">
+				<img src="7T0A4816-Edit.jpg" alt="Dog 3">
+				<img src="7T0A6826-Edit.jpg" alt="Dog 4">
+				<img src="7T0A6955-Edit.jpg" alt="Dog 5">
+				<img src="7T0A6999-Edit.jpg" alt="Dog 6">
+			</div>
+			<div class="gallery" id="landscape">
+				<img src="vefsíða/0V9A6344-Pano.jpg" alt="Landscape 1">
+				<img src="vefsíða/0V9A9212-Edit.jpg" alt="Landscape 2">
+				<img src="vefsíða/7T0A7077.jpg" alt="Landscape 3">
+				<img src="vefsíða/7T0A7181.jpg" alt="Landscape 4">
+				<img src="vefsíða/0V9A9483-Edit.jpg" alt="Landscape 5">
+				<img src="vefsíða/7T0A8025-Edit.jpg" alt="Landscape 6">
+			</div>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<form>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message"></textarea>
+				<input type="submit" value="Send">
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 Photography Portfolio</p>
+	</footer>
 </body>
 </html>
