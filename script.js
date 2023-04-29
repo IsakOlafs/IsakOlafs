@@ -1,6 +1,7 @@
-const images = document.querySelectorAll('.gallery img');
+const images = document.querySelectorAll('.gallery .image');
 const fullScreen = document.getElementById('fullScreen');
 const fullScreenImage = document.getElementById('fullScreenImage');
+const galleryLinks = document.querySelectorAll('.dropdown-content a');
 
 // Add click event listener to each image
 images.forEach(image => {
@@ -9,7 +10,7 @@ images.forEach(image => {
     fullScreen.style.display = 'flex';
 
     // Set the source of the full-screen image to the clicked image
-    fullScreenImage.src = image.src;
+    fullScreenImage.src = image.querySelector('img').src;
   });
 });
 
@@ -17,3 +18,21 @@ images.forEach(image => {
 fullScreen.addEventListener('click', () => {
   fullScreen.style.display = 'none';
 });
+
+// Add click event listener to gallery links
+galleryLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Get the selected category
+    const category = link.getAttribute('data-category');
+
+    // Filter the images based on the selected category
+    images.forEach(image => {
+      if (category === 'all' || image.getAttribute('data-category') === category) {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  });
+});
+
