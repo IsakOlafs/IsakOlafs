@@ -49,6 +49,18 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   display: block;
 }
+.portfolio-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F2F2F2;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.portfolio-button a:hover {
+  background-color: #F2F2F2;
+}
 
 .dropdown-content a:hover {
   background-color: #f1f1f1;
@@ -67,6 +79,7 @@ header {
   right: 0;
   z-index: 100;
 }
+
 
 header h1 {
   font-size: 24px;
@@ -102,21 +115,7 @@ header nav ul li a:hover {
   padding: 100px 30px;
 }
 
-#about h2 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #333333;
-}
 
-#about p {
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #666666;
-}
 
 /* Gallery section styles */
 #gallery {
